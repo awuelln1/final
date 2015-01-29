@@ -1,0 +1,38 @@
+City:
+  city_id: integer
+  city_name: string
+  city_description: text
+  hear_attraction: string
+  see_attraction: string
+  smell_attraction: string
+  taste_attraction: string
+  touch_attraction: string
+
+Sense:
+  sense_id: integer
+  sense_name: string
+  sense_description: text
+
+Attraction:
+  attraction_id: integer
+  attraction_name: string
+  attraction_description: text
+  city_id: integer
+  sense_id: integer
+  profile_id_1: integer
+  profile_id_2: integer
+  profile_id_3: integer
+  profile_id_4: integer
+  profile_id_5: integer
+  attraction_website: text
+
+Profile:
+  profile_id: integer
+  profile_name: string
+  profile_description: text
+
+Specific:
+  city_id: integer
+  sense_id: integer
+  profile_id: integer
+  attraction_id: string
