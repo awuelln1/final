@@ -8,11 +8,11 @@ Specific.delete_all
 
 # Create the cities
 puts "Creating cities..."
-newyork = City.create(city_name: "New York", city_description: "Big Apple")
-chicago = City.create(city_name: "Chicago", city_description: "City of Broad Shoulders")
-orlando = City.create(city_name: "Orlando", city_description: "Mickey Mouse World!")
-philadelphia = City.create(city_name: "Philadelphia", city_description: "City of Brotherly Love")
-lasvegas = City.create(city_name: "Las Vegas", city_description: "Vegas, Baby!")
+newyork = City.create(city_name: "New York", city_description: "Big Apple", hear_attraction: "Lion King on Broadway", see_attraction: "New York Skyline from Staten Island Ferry", smell_attraction: "True NY Style Pizza", taste_attraction: "Cronut", touch_attraction: "Central Park")
+chicago = City.create(city_name: "Chicago", city_description: "City of Broad Shoulders", hear_attraction: "El Train", see_attraction: "Willis Tower Skydeck", smell_attraction: "Garrett Mix Popcorn", taste_attraction: "Gibson's Steak", touch_attraction: "Wrigley Field Ivy")
+orlando = City.create(city_name: "Orlando", city_description: "The Happiest Place on Earth!", hear_attraction: "It's a Small World After All", see_attraction: "Epcot Center Fireworks", smell_attraction: "Soarin' Scents", taste_attraction: "Harry Potter World Butter Beer", touch_attraction: "High Five with Mickey Mouse")
+philadelphia = City.create(city_name: "Philadelphia", city_description: "City of Brotherly Love", hear_attraction: "Philadelphia Philharmonic", see_attraction: "Liberty Bell", smell_attraction: "Inside of Independence Hall", taste_attraction: "Pat's King of Cheese Steaks", touch_attraction: "Rocky Steps")
+lasvegas = City.create(city_name: "Las Vegas", city_description: "Vegas, Baby!", hear_attraction: "World Series of Poker 'All-In' Call", see_attraction: "Bellagio Fountains", smell_attraction: "Aria Lobby Smell", taste_attraction: "Holstein's Gold Standard Burger", touch_attraction: "Blackjack Felt")
 
 # Create the senses
 puts "Creating senses..."
@@ -25,10 +25,10 @@ hear = Sense.create(sense_name: "Hear")
 # Create the attractions
 puts "Creating attractions..."
 liberty = Attraction.create(attraction_name: "Liberty Bell")
-philly = Attraction.create(attraction_name: "Philly Smell")
-cheesesteak = Attraction.create(attraction_name: "Cheese Steak")
-philly2 = Attraction.create(attraction_name: "Philly Touch")
-philly3 = Attraction.create(attraction_name: "Philly Sound")
+philly = Attraction.create(attraction_name: "Inside of Independence Hall")
+cheesesteak = Attraction.create(attraction_name: "Pat's King of Cheese Steaks")
+philly2 = Attraction.create(attraction_name: "Rocky Steps")
+philly3 = Attraction.create(attraction_name: "Philadelphia Philharmonic")
 
 willis = Attraction.create(attraction_name: "Willis Tower Skydeck")
 garrett = Attraction.create(attraction_name: "Garrett Mix Popcorn")
@@ -37,21 +37,21 @@ ivy = Attraction.create(attraction_name: "Wrigley Field Ivy")
 el = Attraction.create(attraction_name: "El Train")
 
 ferry = Attraction.create(attraction_name: "New York Skyline from Staten Island Ferry")
-ny = Attraction.create(attraction_name: "NY Smell")
+ny = Attraction.create(attraction_name: "True NY Style Pizza")
 cronut = Attraction.create(attraction_name: "Cronut")
-ny2 = Attraction.create(attraction_name: "NY Touch")
+ny2 = Attraction.create(attraction_name: "Central Park")
 broadway = Attraction.create(attraction_name: "Lion King on Broadway")
 
 bellagio = Attraction.create(attraction_name: "Bellagio Fountains")
-lv = Attraction.create(attraction_name: "LV Smell")
-holsteins = Attraction.create(attraction_name: "Holstein's Gold Standard")
+lv = Attraction.create(attraction_name: "Aria Lobby Smell")
+holsteins = Attraction.create(attraction_name: "Holstein's Gold Standard Burger")
 felt = Attraction.create(attraction_name: "Blackjack Felt")
 allin = Attraction.create(attraction_name: "World Series of Poker All-In")
 
-fireworks = Attraction.create(attraction_name: "Epcot Fireworks")
+fireworks = Attraction.create(attraction_name: "Epcot Center Fireworks")
 soarin = Attraction.create(attraction_name: "Soarin' Scents")
 california = Attraction.create(attraction_name: "Harry Potter World Butter Beer")
-orlando = Attraction.create(attraction_name: "Orlando Touch")
+orlando_touch = Attraction.create(attraction_name: "High Five with Mickey Mouse")
 small = Attraction.create(attraction_name: "It's a Small World After All")
 
 # Create the profiles
@@ -96,7 +96,7 @@ Specific.create(city_id: lasvegas.id, sense_id: hear.id, profile_id: lifestyler.
 Specific.create(city_id: orlando.id, sense_id: see.id, profile_id: lifestyler.id, attraction_id: fireworks.id)
 Specific.create(city_id: orlando.id, sense_id: smell.id, profile_id: lifestyler.id, attraction_id: soarin.id)
 Specific.create(city_id: orlando.id, sense_id: taste.id, profile_id: lifestyler.id, attraction_id: california.id)
-Specific.create(city_id: orlando.id, sense_id: touch.id, profile_id: lifestyler.id, attraction_id: orlando.id)
+Specific.create(city_id: orlando.id, sense_id: touch.id, profile_id: lifestyler.id, attraction_id: orlando_touch.id)
 Specific.create(city_id: orlando.id, sense_id: hear.id, profile_id: lifestyler.id, attraction_id: small.id)
 
 puts "There are now #{City.count} cities, #{Attraction.count} attractions, and #{Specific.count} specific sense attractions in the database."

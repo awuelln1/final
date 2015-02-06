@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :cities
+  resources :profiles
+  resources :attractions
+  resources :senses
+  resources :specifics
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
