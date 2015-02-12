@@ -1,6 +1,7 @@
 City:
   city_id: integer
   city_name: string
+  city_image: string
   city_description: text
   hear_attraction: string
   see_attraction: string

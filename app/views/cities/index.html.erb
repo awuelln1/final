@@ -1,14 +1,20 @@
-<h1>City Sense Experiences!</h1>
+<!-- Use view helpers (e.g. link_to and image_tag) -->
+<!-- and implement real data -->
 
-<p><a href="/cities/new" class="btn btn-primary">New City</a></p>
+<div class="row">
+<% @cities.each do |city| %>
 
-<table class="table">
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= link_to image_tag(city.city_image), city %>
 
-  <% cities = City.all %>
-  <% cities.each do |city| %>
-  <tr>
-  <td>
-    <a href="/cities/<%= city.id %>"> <%= city.city_name %></a></td>
-  </tr>
-
-<% end %>
+    <div class="caption">
+      <h3><%= link_to city.city_name, city %></h3>
+        <p><%= link_to city.city_description, city %></p>
+      </div>
+    </div>
+  </div>
+    
+  <% end %>
+</div>
+  

@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "smell_attraction"
     t.string  "taste_attraction"
     t.string  "touch_attraction"
+    t.string  "city_image"
   end
 
   add_index "cities", ["city_id"], name: "index_cities_on_city_id"

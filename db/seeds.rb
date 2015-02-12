@@ -8,11 +8,11 @@ Specific.delete_all
 
 # Create the cities
 puts "Creating cities..."
-newyork = City.create(city_name: "New York", city_description: "Big Apple", hear_attraction: "Lion King on Broadway", see_attraction: "New York Skyline from Staten Island Ferry", smell_attraction: "True NY Style Pizza", taste_attraction: "Cronut", touch_attraction: "Central Park")
-chicago = City.create(city_name: "Chicago", city_description: "City of Broad Shoulders", hear_attraction: "El Train", see_attraction: "Willis Tower Skydeck", smell_attraction: "Garrett Mix Popcorn", taste_attraction: "Gibson's Steak", touch_attraction: "Wrigley Field Ivy")
-orlando = City.create(city_name: "Orlando", city_description: "The Happiest Place on Earth!", hear_attraction: "It's a Small World After All", see_attraction: "Epcot Center Fireworks", smell_attraction: "Soarin' Scents", taste_attraction: "Harry Potter World Butter Beer", touch_attraction: "High Five with Mickey Mouse")
-philadelphia = City.create(city_name: "Philadelphia", city_description: "City of Brotherly Love", hear_attraction: "Philadelphia Philharmonic", see_attraction: "Liberty Bell", smell_attraction: "Inside of Independence Hall", taste_attraction: "Pat's King of Cheese Steaks", touch_attraction: "Rocky Steps")
-lasvegas = City.create(city_name: "Las Vegas", city_description: "Vegas, Baby!", hear_attraction: "World Series of Poker 'All-In' Call", see_attraction: "Bellagio Fountains", smell_attraction: "Aria Lobby Smell", taste_attraction: "Holstein's Gold Standard Burger", touch_attraction: "Blackjack Felt")
+newyork = City.create(city_name: "New York", city_description: "The Big Apple", city_image: "newyork.jpg", hear_attraction: "Lion King on Broadway", see_attraction: "New York Skyline from Staten Island Ferry", smell_attraction: "True NY Style Pizza", taste_attraction: "Cronut", touch_attraction: "Central Park")
+chicago = City.create(city_name: "Chicago", city_description: "City of Broad Shoulders", city_image: "chicago.jpg", hear_attraction: "El Train", see_attraction: "Willis Tower Skydeck", smell_attraction: "Garrett Mix Popcorn", taste_attraction: "Gibson's Steak", touch_attraction: "Wrigley Field Ivy")
+orlando = City.create(city_name: "Orlando", city_description: "The Happiest Place on Earth!", city_image: "orlando.jpg", hear_attraction: "It's a Small World After All", see_attraction: "Epcot Center Fireworks", smell_attraction: "Soarin' Scents", taste_attraction: "Harry Potter World Butter Beer", touch_attraction: "High Five with Mickey Mouse")
+philadelphia = City.create(city_name: "Philadelphia", city_description: "City of Brotherly Love", city_image: "philadelphia.jpg", hear_attraction: "Philadelphia Philharmonic", see_attraction: "Liberty Bell", smell_attraction: "Inside of Independence Hall", taste_attraction: "Pat's King of Cheese Steaks", touch_attraction: "Rocky Steps")
+lasvegas = City.create(city_name: "Las Vegas", city_description: "Vegas, Baby!", city_image: "lasvegas.jpg",  hear_attraction: "World Series of Poker 'All-In' Call", see_attraction: "Bellagio Fountains", smell_attraction: "Aria Lobby Smell", taste_attraction: "Holstein's Gold Standard Burger", touch_attraction: "Blackjack Felt")
 
 # Create the senses
 puts "Creating senses..."
