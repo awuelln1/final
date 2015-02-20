@@ -1,3 +1,7 @@
 class City < ActiveRecord::Base
-  has_many :attraction_names
+  belongs_to :state
+  has_many :attractions
+  has_many :specifics, through: :attractions
+
+  validates :city_name, presence: true
 end

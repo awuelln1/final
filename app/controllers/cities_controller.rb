@@ -16,9 +16,13 @@ class CitiesController < ApplicationController
 
 
   def create
-    city_params = params.require(:city).permit(:name)
-    City.create(city_params)
-    redirect_to city_path
+    city_params = params.require(:city).permit!
+    @city = City.create(city_params)
+    if @city.valid?
+      redirect_to cities_path
+    else
+      render text: "FAIL"
+    end
   end
 
 

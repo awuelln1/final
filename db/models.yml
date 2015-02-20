@@ -1,5 +1,4 @@
 City:
-  city_id: integer
   city_name: string
   city_image: string
   city_description: text
@@ -8,14 +7,9 @@ City:
   smell_attraction: string
   taste_attraction: string
   touch_attraction: string
-
-Sense:
-  sense_id: integer
-  sense_name: string
-  sense_description: text
+  state_id: integer
 
 Attraction:
-  attraction_id: integer
   attraction_name: string
   attraction_description: text
   city_id: integer
@@ -27,13 +21,19 @@ Attraction:
   profile_id_5: integer
   attraction_website: text
 
-Profile:
+Specific:
+  city_id: integer
+  attraction_id: string
+  sense_id: integer
   profile_id: integer
+
+State:
+  name: string
+
+Profile:
   profile_name: string
   profile_description: text
 
-Specific:
-  city_id: integer
-  sense_id: integer
-  profile_id: integer
-  attraction_id: string
+Sense:
+  sense_name: string
+  sense_description: text
