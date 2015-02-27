@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :senses
   resources :specifics
   
+  root to: 'cities#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
