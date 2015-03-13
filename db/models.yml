@@ -37,3 +37,14 @@ Profile:
 Sense:
   sense_name: string
   sense_description: text
+
+User:
+  email: string
+  password_digest: string
+  name: string
+
+Review:
+  movie_id: integer
+  user_id: integer
+  rating: integer
+  body: text

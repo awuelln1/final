@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :cities
+  resources :cities do
+    resources :reviews
+  end
   resources :profiles
   resources :attractions
   resources :senses
   resources :specifics
+  resources :users
+  resources :sessions
+
+  get "/login", to: "sessions#new"
+  get "/logout", to: "sessions#destroy"
   
   root to: 'cities#index'
 

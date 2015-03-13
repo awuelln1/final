@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 0) do
     t.text   "profile_description"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "movie_id"
+    t.integer "user_id"
+    t.integer "rating"
+    t.text    "body"
+  end
+
+  add_index "reviews", ["movie_id"], name: "index_reviews_on_movie_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+
   create_table "senses", force: :cascade do |t|
     t.string "sense_name"
     t.text   "sense_description"
@@ -66,6 +76,12 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "specifics", ["sense_id"], name: "index_specifics_on_sense_id"
 
   create_table "states", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
     t.string "name"
   end
 

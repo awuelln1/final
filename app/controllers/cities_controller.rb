@@ -1,4 +1,5 @@
 class CitiesController < ApplicationController
+  skip_before_action :require_user, except: [:show, :new]
 
   def index
     @cities = City.all

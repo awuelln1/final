@@ -5,14 +5,65 @@ Sense.delete_all
 Attraction.delete_all
 Profile.delete_all
 Specific.delete_all
+State.delete_all
+
+# Create users
+User.create(name: "Brian", email: "b-eng@kellogg.northwestern.edu", password: "secret")
 
 # Create the states
 puts "Creating states..."
-newyorknewyork = State.create(name: "New York")
-illinois = State.create(name: "Illinois")
+alabama = State.create(name: "Alabama")
+alaska = State.create(name: "Alaska") 
+arizona = State.create(name: "Arizona") 
+arkansas = State.create(name: "Arkansas") 
+california = State.create(name: "California") 
+colorado = State.create(name: "Colorado") 
+connecticut = State.create(name: "Connecticut") 
+delaware = State.create(name: "Delaware") 
 florida = State.create(name: "Florida")
-pennsylvania = State.create(name: "Pennsylvania")
+georgia = State.create(name: "Georgia") 
+hawaii = State.create(name: "Hawaii") 
+idaho = State.create(name: "Idaho") 
+illinois = State.create(name: "Illinois")
+indiana = State.create(name: "Indiana") 
+iowa = State.create(name: "Iowa") 
+kansas = State.create(name: "Kansas") 
+kentucky = State.create(name: "Kentucky") 
+louisiana = State.create(name: "Louisiana") 
+maine = State.create(name: "Maine") 
+maryland = State.create(name: "Maryland") 
+massachusetts = State.create(name: "Massachusetts") 
+michigan = State.create(name: "Michigan") 
+minnesota = State.create(name: "Minnesota") 
+mississippi = State.create(name: "Mississippi") 
+missouri = State.create(name: "Missouri") 
+montana = State.create(name: "Montana")
+nebraska = State.create(name: "Nebraska")
 nevada = State.create(name: "Nevada")
+newhampshire = State.create(name: "New Hampshire") 
+newjersey = State.create(name: "New Jersey") 
+newmexico = State.create(name: "New Mexico") 
+newyorknewyork = State.create(name: "New York")
+northcarolina = State.create(name: "North Carolina") 
+northdakota = State.create(name: "North Dakota") 
+ohio = State.create(name: "Ohio") 
+oklahoma = State.create(name: "Oklahoma") 
+oregon = State.create(name: "Oregon") 
+pennsylvania = State.create(name: "Pennsylvania")
+rhodeisland = State.create(name: "Rhode Island") 
+southcarolina = State.create(name: "South Carolina") 
+southdakota = State.create(name: "South Dakota") 
+tennessee = State.create(name: "Tennessee") 
+texas = State.create(name: "Texas") 
+utah = State.create(name: "Utah") 
+vermont = State.create(name: "Vermont") 
+virginia = State.create(name: "Virginia") 
+washington = State.create(name: "Washington")
+washingtondc = State.create(name: "Washington, DC")
+westvirginia = State.create(name: "West Virginia") 
+wisconsin = State.create(name: "Wisconsin") 
+wyoming = State.create(name: "Wyoming")
+
 
 # Create the cities
 puts "Creating cities..."
